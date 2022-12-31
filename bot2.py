@@ -1,14 +1,14 @@
 import account_generator
 import datetime
-import os
 import telebot
 from telebot import types
 
 account = account_generator.Account(balance=0,salary=0)
 markup = types.ForceReply(selective=False)
 
-
-API = '5979856707:AAED3b29Mpts1-EIMTMJ5yifLFnyU93MS_Y'
+with open('api.txt' ,'r') as file:
+    r = file.read()
+API = r
 bot = telebot.TeleBot(API)
 
 @bot.message_handler(commands=['start'])
