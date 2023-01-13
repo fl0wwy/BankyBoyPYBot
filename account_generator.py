@@ -2,7 +2,8 @@ import datetime
 from typing import Union,Optional
 
 class Account:
-    def __init__(self,balance: Optional[Union[int,float]]=None ,salary: Optional[Union[int,float]]=None) -> None:
+    def __init__(self,id: int,balance: Optional[Union[int,float]]=None ,salary: Optional[Union[int,float]]=None) -> None:
+        self.id = id
         self.date = ''
         self.balance = balance
         self.expenses = {}
